@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Gift For You</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Diplomata+SC&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        /* General */
+
+        body {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .scrollContainer {
+            width: 100%;
+            height: 100%;
+
+            /* Scroll to snap code */
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll;
+
+        }
+
+        .section {
+            height: 100vh;
+
+            /* Scroll to snap code */
+            scroll-snap-align: start;
+        }
+
+        h1 {
+            font-family: 'Rubik Vinyl', cursive;
+            font-weight: bolder;
+            font-size: 3.5rem;
+            text-align: center;
+        }
+
+        p {
+            font-family: 'Mountains of Christmas', cursive;
+            font-weight: bolder;
+            font-size: 1.5rem;
+        }
+
+        /* Section One */
+
+        .sectionOne {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            background: url("https://cdn.shopify.com/s/files/1/0655/0051/2490/files/pexels-chris-10488178.jpg?v=1671157556");
+            background-position: bottom;
+            background-repeat: no-repeat;
+            background-size: cover;
+            overflow: hidden;
+        }
+
+        .heroHeading {
+            color: white;
+            text-shadow: 0px 0px 5px white;
+            transition: 2s ease-out;
+        }
+
+        .showingHeading {
+            color: red;
+            text-shadow: 2px 2px 5px rgb(37, 153, 37);
+        }
+
+        .heroSubText {
+            margin-top: 3em;
+            color: red;
+            text-shadow: 1px 1px 1px green;
+        }
+
+        .sectionOne .arrowDownContainer {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .arrowSymbol {
+            margin: 0 auto;
+        }
+
+        .arrowOne {
+            margin-top: 2em;
+            animation: arrowAnimation 2s infinite;
+        }
+
+        .arrowTwo {
+            animation: arrowAnimation 2s infinite;
+            animation-delay: 0.25s
+        }
+
+        .arrowThree {
+            animation: arrowAnimation 2s infinite;
+            animation-delay: 0.5s;
+        }
+
+        @keyframes arrowAnimation {
+            0% {
+                color: red;
+                transform: translateY(0em);
+            }
+            50% {
+                transform: translateY(0.3em);
+                color: green;
+            }
+            100% {
+                color: red;
+                transform: translateY(0em);
+            }
+        }
+
+        /* Section Two */
+
+        .sectionTwo {
+            position: relative;
+            overflow: hidden;
+            overflow: hidden;
+        }
+
+        .videoSectionTextContainer {
+            position: relative;
+            z-index: 3;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .ticketImg {
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
+            margin-top: 4em;
+            transform: scale(0) rotate(0deg);
+            transition: 2s ease-out;
+        }
+
+        .showTicket {
+            transform: scale(1) rotate(1080deg);
+        }
+
+        .videoSectionTextContainer h3 {
+            text-shadow: 1px 1px 1px black;
+            font-family: 'Diplomata SC', cursive;
+            font-size: 1.5rem;
+            margin: 0 auto;
+            margin-top: 20%;
+            width: 100%;
+            text-align: center;
+            animation: textColorAnimation 3s infinite;
+            padding: 0em 1em;
+        }
+
+        .videoContainer {
+            position: absolute;
+            bottom: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            overflow: hidden;
+        }
+
+        .videoElemenet {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        @keyframes textColorAnimation {
+            0% {
+                color: white;
+                transform: scale(1);
+            }
+            50% {
+                color: red;
+                transform: scale(1.05);
+            }
+            100% {
+                color: white;
+                transform: scale(1);
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="scrollContainer">
+
+        <section class="section sectionOne">
+            <h1 class="heroHeading">Merry<br> Christmas!</h1>
+            <p class="heroSubText">To see your gift, scroll down</p>
+            <div class="arrowDownContainer">
+                <p class="arrowSymbol arrowOne">▼</p>
+                <p class="arrowSymbol arrowTwo">▼</p>
+                <p class="arrowSymbol arrowThree">▼</p>
+            </div>
+
+        </section>
+        
+        <section class="section sectionTwo">
+            
+            <div class="videoSectionTextContainer">
+                <h3>One Ticket to Sandbox VR!</h3>
+                <img class="ticketImg" src="https://cdn.shopify.com/s/files/1/0655/0051/2490/files/kisspng-raffle-ticket-lottery-prize-stock-photography-ticket-5abcf21b8fdf63.3982457415223321875893.png?v=1671154632">
+            </div>
+            
+            <div class="videoContainer">
+                <video class="videoElemenet" loop autoplay muted playsinline> 
+                    <source src="https://cdn.shopify.com/videos/c/o/v/130661338e144a3e87953a3751fd5b46.mp4" type="video/mp4">
+                </video>
+            </div>
+
+        </section>
+
+    </div>
+
+    <script>
+        const options = {
+            threshold: 0,
+            rootMargin: "-100px"
+        }
+
+        // IntersectionObserver for Hero section
+
+        const heroHeading = document.querySelector('.heroHeading');
+
+        const headingObserver = new IntersectionObserver(function(entries, headingObserver) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('showingHeading');
+                }
+            });
+        }, options);
+
+        headingObserver.observe(heroHeading);
+
+
+        // IntersectionObserver for the ticket section
+
+        const ticket = document.querySelector('.ticketImg');
+
+        const ticketObserver = new IntersectionObserver(function(entries, ticketObserver) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('showTicket');
+                }
+            });
+        }, options);
+
+        ticketObserver.observe(ticket);
+    </script>
+</body>
+</html>
