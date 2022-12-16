@@ -69,10 +69,29 @@
             overflow: hidden;
         }
 
+        .christmasLightsContainer {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .christmaslights {
+            width: 120%;
+            height: 100%;
+        }
+
+        @media screen and (min-width: 780px) {
+            .christmasLightsContainer {
+                display: none;
+            }
+        }
+
         .heroHeading {
             color: white;
             text-shadow: 0px 0px 5px white;
-            transition: 2s ease-out;
+            transition: 4s ease-out;
         }
 
         .showingHeading {
@@ -171,6 +190,26 @@
             padding: 0em 1em;
         }
 
+        .LinkElement {
+            margin: 0 auto;
+            width: 200px;
+            margin-top: 5em;
+        }
+
+        .button {
+            width: 100%;
+            height: 100%;
+            font-family: 'Diplomata SC', cursive;
+            padding: 1em;
+            transition: 3s;
+            animation: buttonAnimation 3s infinite;
+            color: white;
+            background-color: black;
+            border: none;
+            border-radius: 5em;
+            cursor: pointer;
+        }
+
         .videoContainer {
             position: absolute;
             bottom: 0;
@@ -202,6 +241,23 @@
                 transform: scale(1);
             }
         }
+        @keyframes buttonAnimation {
+            0% {
+                color: white;
+                transform: scale(1);
+                background-color: black;
+            }
+            50% {
+                color: red;
+                transform: scale(1.05);
+                background-color: white;
+            }
+            100% {
+                color: white;
+                transform: scale(1);
+                background-color: black;
+            }
+        }
     </style>
 
 </head>
@@ -210,6 +266,11 @@
     <div class="scrollContainer">
 
         <section class="section sectionOne">
+
+            <div class="christmasLightsContainer">
+                <img class="christmaslights" src="https://cdn.shopify.com/s/files/1/0655/0051/2490/files/5a1ba236214549.0041962215117604381363.png?v=1671163364">
+            </div>
+
             <h1 class="heroHeading">Merry<br> Christmas!</h1>
             <p class="heroSubText">To see your gift, scroll down</p>
             <div class="arrowDownContainer">
@@ -225,6 +286,7 @@
             <div class="videoSectionTextContainer">
                 <h3>One Ticket to Sandbox VR!</h3>
                 <img class="ticketImg" src="https://cdn.shopify.com/s/files/1/0655/0051/2490/files/kisspng-raffle-ticket-lottery-prize-stock-photography-ticket-5abcf21b8fdf63.3982457415223321875893.png?v=1671154632">
+                <a href="https://www.youtube.com/watch?v=oHg5SJYRHA0" class="LinkElement"><button class="button">Get Your Ticket Here!</button></a>
             </div>
             
             <div class="videoContainer">
